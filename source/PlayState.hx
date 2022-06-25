@@ -713,7 +713,6 @@ class PlayState extends MusicBeatState
 				}
 			case 'room':
 				{
-				GameOverSubstate.characterName = 'tiredCloud';
 				var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('cloud/silver-lining/cloudRoom'));
 			    add(bg);
 				bg.setPosition(-600, -200);
