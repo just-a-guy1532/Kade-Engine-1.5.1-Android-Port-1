@@ -711,7 +711,7 @@ class PlayState extends MusicBeatState
 				lightningStrike.frames = Paths.getSparrowAtlas('lightningStrike');
 				lightningStrike.animation.addByPrefix('strike', 'strike', false);
 				}
-			case 'room
+			case 'room':
 				{
 				GameOverSubstate.characterName = 'tiredCloud';
 				var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('cloud/silver-lining/cloudRoom'));
