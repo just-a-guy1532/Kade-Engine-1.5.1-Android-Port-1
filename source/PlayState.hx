@@ -696,6 +696,28 @@ class PlayState extends MusicBeatState
 	
 						add(stageCurtains);
 				}
+			case 'house': 
+				{
+			    var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('cloud/cloud/housePlace'));
+			    add(bg);
+				bg.setPosition(-600, -200);
+				}
+			case 'wethouse': 
+				{
+			    var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('cloud/rain/housePlaceRain'));
+			    add(bg);
+				bg.setPosition(-600, -200);
+				lightningStrike = new FlxSprite(-250, -1150);
+				lightningStrike.frames = Paths.getSparrowAtlas('lightningStrike');
+				lightningStrike.animation.addByPrefix('strike', 'strike', false);
+				}
+			case 'room
+				{
+				GameOverSubstate.characterName = 'tiredCloud';
+				var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('cloud/silver-lining/cloudRoom'));
+			    add(bg);
+				bg.setPosition(-600, -200);
+				}
 			default:
 			{
 					defaultCamZoom = 0.9;
@@ -2349,18 +2371,27 @@ class PlayState extends MusicBeatState
 	
 					if ((daNote.mustPress && daNote.tooLate && !FlxG.save.data.downscroll || daNote.mustPress && daNote.tooLate && FlxG.save.data.downscroll) && daNote.mustPress)
 					{
-							if (daNote.isSustainNote && daNote.wasGoodHit)
-							{
-								daNote.kill();
-								notes.remove(daNote, true);
-							}
-							else
-							{
-								health -= 0.075;
-								vocals.volume = 0;
-								if (theFunne)
-									noteMiss(daNote.noteData, daNote);
-							}
+						if (daNote.noteType == 2)
+										{
+											health -= 3;
+							if (lightningStrike != null && curStage == 'wethouse')
+								lightningStrike.animation.play('strike', false);
+							new FlxTimer().start(0.2, function(tmr:FlxTimer)
+								{
+									FlxG.sound.play(Paths.sound('Thunder'), 1, false);
+									FlxG.camera.shake(0.1,0.1);
+									camHUD.shake(0.1,0.7);
+									noteMiss(daNote);	
+								});
+						}
+										}
+									if (daNote.noteType == 1 || daNote.noteType == 0)
+										{
+											health -= 0.075;
+											vocals.volume = 0;
+											if (theFunne)
+												noteMiss(daNote.noteData, daNote);
+										}
 		
 							daNote.visible = false;
 							daNote.kill();
@@ -3147,6 +3178,18 @@ class PlayState extends MusicBeatState
 
 				if (!note.wasGoodHit)
 				{
+			if (daNote.noteType == 2){
+				boyfriend.specialAnim = true;	
+				boyfriend.playAnim('dodge');
+				if (lightningStrike != null && curStage == 'wethouse')
+					lightningStrike.animation.play('strike', false);
+
+				FlxG.sound.play(Paths.sound('Thunder'), 1, false);
+				FlxG.camera.shake(0.1, 0.1);
+				camHUD.shake(0, 0);
+				{
+				else
+				}
 					if (!note.isSustainNote)
 					{
 						popUpScore(note);
