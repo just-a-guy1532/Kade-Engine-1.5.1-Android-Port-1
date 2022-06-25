@@ -100,7 +100,7 @@ class Note extends FlxSprite
 				updateHitbox();
 			default:
 				frames = Paths.getSparrowAtlas('NOTE_assets');
-						var fuckingSussy = Paths.getSparrowAtlas('NOTE_assets_hurt');
+						var fuckingSussy = Paths.getSparrowAtlas('RAINNOTE_assets');
 						for(amogus in fuckingSussy.frames)
 							{
 								this.frames.pushFrame(amogus);
@@ -110,7 +110,7 @@ class Note extends FlxSprite
 						{
 							case 2:
 							{
-								frames = Paths.getSparrowAtlas('NOTE_assets_hurt');
+								frames = Paths.getSparrowAtlas('RAINNOTE_assets');
 								animation.addByPrefix('greenScroll', 'green0');
 								animation.addByPrefix('redScroll', 'red0');
 								animation.addByPrefix('blueScroll', 'blue0');
