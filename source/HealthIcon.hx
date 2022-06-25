@@ -12,7 +12,21 @@ class HealthIcon extends FlxSprite
 	public function new(char:String = 'bf', isPlayer:Bool = false)
 	{
 		super();
+		switch (char) {
+                        case 'cloud':
+				loadGraphic(Paths.image('icons/cloud'), true, 150, 150);
+				animation.add('cloud', [0, 1], 0, false, isPlayer);
+                        case 'sadcloud':
+				loadGraphic(Paths.image('icons/cloud'), true, 150, 150);
+				animation.add('cloud', [0, 1], 0, false, isPlayer);
+                        case 'tiredcloud':
+				loadGraphic(Paths.image('icons/cloud'), true, 150, 150);
+				animation.add('cloud', [0, 1], 0, false, isPlayer);
+                        case 'cloudPixel':
+				loadGraphic(Paths.image('icons/cloud-pixel'), true, 150, 150);
+				animation.add('cloud', [0, 1], 0, false, isPlayer);
 		
+	default:
 		loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 
 		antialiasing = true;
@@ -44,18 +58,6 @@ class HealthIcon extends FlxSprite
 		{
 			case 'bf-pixel' | 'senpai' | 'senpai-angry' | 'spirit' | 'gf-pixel':
 				antialiasing = false;
-                        case 'cloud':
-				loadGraphic(Paths.image('icons/cloud'), true, 150, 150);
-				animation.add('cloud', [0, 1], 0, false, isPlayer);
-                        case 'sadcloud':
-				loadGraphic(Paths.image('icons/cloud'), true, 150, 150);
-				animation.add('cloud', [0, 1], 0, false, isPlayer);
-                        case 'tiredcloud':
-				loadGraphic(Paths.image('icons/cloud'), true, 150, 150);
-				animation.add('cloud', [0, 1], 0, false, isPlayer);
-                        case 'cloudPixel':
-				loadGraphic(Paths.image('icons/cloud-pixel'), true, 150, 150);
-				animation.add('cloud', [0, 1], 0, false, isPlayer);
 		}
 
 		scrollFactor.set();
