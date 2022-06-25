@@ -45,6 +45,7 @@ class Note extends FlxSprite
 		if (prevNote == null)
 			prevNote = this;
 
+		this.noteType = noteType;
 		this.prevNote = prevNote;
 		isSustainNote = sustainNote;
 
@@ -65,10 +66,20 @@ class Note extends FlxSprite
 			case 'pixel':
 				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels','week6'), true, 17, 17);
 
-				animation.add('greenScroll', [6]);
-				animation.add('redScroll', [7]);
-				animation.add('blueScroll', [5]);
-				animation.add('purpleScroll', [4]);
+					if (noteType == 2)
+						{
+							animation.add('greenScroll', [22]);
+							animation.add('redScroll', [23]);
+							animation.add('blueScroll', [21]);
+							animation.add('purpleScroll', [20]);
+						}
+					else
+						{
+							animation.add('greenScroll', [6]);
+							animation.add('redScroll', [7]);
+							animation.add('blueScroll', [5]);
+							animation.add('purpleScroll', [4]);
+						}
 
 				if (isSustainNote)
 				{
@@ -89,25 +100,59 @@ class Note extends FlxSprite
 				updateHitbox();
 			default:
 				frames = Paths.getSparrowAtlas('NOTE_assets');
-
-				animation.addByPrefix('greenScroll', 'green0');
-				animation.addByPrefix('redScroll', 'red0');
-				animation.addByPrefix('blueScroll', 'blue0');
-				animation.addByPrefix('purpleScroll', 'purple0');
-
-				animation.addByPrefix('purpleholdend', 'pruple end hold');
-				animation.addByPrefix('greenholdend', 'green hold end');
-				animation.addByPrefix('redholdend', 'red hold end');
-				animation.addByPrefix('blueholdend', 'blue hold end');
-
-				animation.addByPrefix('purplehold', 'purple hold piece');
-				animation.addByPrefix('greenhold', 'green hold piece');
-				animation.addByPrefix('redhold', 'red hold piece');
-				animation.addByPrefix('bluehold', 'blue hold piece');
-
-				setGraphicSize(Std.int(width * 0.7));
-				updateHitbox();
-				antialiasing = true;
+						var fuckingSussy = Paths.getSparrowAtlas('NOTE_assets_hurt');
+						for(amogus in fuckingSussy.frames)
+							{
+								this.frames.pushFrame(amogus);
+							}
+ 
+						switch(noteType)
+						{
+							case 2:
+							{
+								frames = Paths.getSparrowAtlas('NOTE_assets_hurt');
+								animation.addByPrefix('greenScroll', 'green0');
+								animation.addByPrefix('redScroll', 'red0');
+								animation.addByPrefix('blueScroll', 'blue0');
+								animation.addByPrefix('purpleScroll', 'purple0');
+ 
+								animation.addByPrefix('purpleholdend', 'pruple end hold');
+								animation.addByPrefix('greenholdend', 'green hold end');
+								animation.addByPrefix('redholdend', 'red hold end');
+								animation.addByPrefix('blueholdend', 'blue hold end');
+ 
+								animation.addByPrefix('purplehold', 'purple hold piece');
+								animation.addByPrefix('greenhold', 'green hold piece');
+								animation.addByPrefix('redhold', 'red hold piece');
+								animation.addByPrefix('bluehold', 'blue hold piece');
+ 
+								setGraphicSize(Std.int(width * 0.7));
+								updateHitbox();
+								antialiasing = true;
+							}
+							default:
+							{
+								frames = Paths.getSparrowAtlas('NOTE_assets');
+								animation.addByPrefix('greenScroll', 'green0');
+								animation.addByPrefix('redScroll', 'red0');
+								animation.addByPrefix('blueScroll', 'blue0');
+								animation.addByPrefix('purpleScroll', 'purple0');
+ 
+								animation.addByPrefix('purpleholdend', 'pruple end hold');
+								animation.addByPrefix('greenholdend', 'green hold end');
+								animation.addByPrefix('redholdend', 'red hold end');
+								animation.addByPrefix('blueholdend', 'blue hold end');
+ 
+								animation.addByPrefix('purplehold', 'purple hold piece');
+								animation.addByPrefix('greenhold', 'green hold piece');
+								animation.addByPrefix('redhold', 'red hold piece');
+								animation.addByPrefix('bluehold', 'blue hold piece');
+ 
+								setGraphicSize(Std.int(width * 0.7));
+								updateHitbox();
+								antialiasing = true;
+							}
+						}
 		}
 
 		switch (noteData)
