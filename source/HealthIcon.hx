@@ -28,6 +28,7 @@ class HealthIcon extends FlxSprite
 		animation.add('face', [10, 11], 0, false, isPlayer);
 		animation.add('dad', [12, 13], 0, false, isPlayer);
 		animation.add('senpai', [22, 22], 0, false, isPlayer);
+		animation.add('senpai-tv', [22, 22], 0, false, isPlayer);
 		animation.add('senpai-angry', [22, 22], 0, false, isPlayer);
 		animation.add('spirit', [23, 23], 0, false, isPlayer);
 		animation.add('bf-old', [14, 15], 0, false, isPlayer);
@@ -43,6 +44,18 @@ class HealthIcon extends FlxSprite
 		{
 			case 'bf-pixel' | 'senpai' | 'senpai-angry' | 'spirit' | 'gf-pixel':
 				antialiasing = false;
+                        case 'cloud':
+				loadGraphic(Paths.image('icons/cloud'), true, 150, 150);
+				animation.add('cloud', [0, 1], 0, false, isPlayer);
+                        case 'sadcloud':
+				loadGraphic(Paths.image('icons/cloud'), true, 150, 150);
+				animation.add('cloud', [0, 1], 0, false, isPlayer);
+                        case 'tiredcloud':
+				loadGraphic(Paths.image('icons/cloud'), true, 150, 150);
+				animation.add('cloud', [0, 1], 0, false, isPlayer);
+                        case 'cloudPixel':
+				loadGraphic(Paths.image('icons/cloud-pixel'), true, 150, 150);
+				animation.add('cloud', [0, 1], 0, false, isPlayer);
 		}
 
 		scrollFactor.set();
