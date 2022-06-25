@@ -1393,11 +1393,16 @@ class ChartingState extends MusicBeatState
 		var noteStrum = getStrumTime(dummyArrow.y) + sectionStartTime();
 		var noteData = Math.floor(FlxG.mouse.x / GRID_SIZE);
 		var noteSus = 0;
+				var noteType = 0;
+				if (FlxG.keys.pressed.ONE)
+					noteType = 1;
+				if (FlxG.keys.pressed.ALT)
+					noteType = 2;
 
 		if (n != null)
-			_song.notes[curSection].sectionNotes.push([n.strumTime, n.noteData, n.sustainLength]);
+			_song.notes[curSection].sectionNotes.push([n.strumTime, n.noteData, n.sustainLength, n.noteType]);
 		else
-			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus]);
+			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, noteType]);
 
 		var thingy = _song.notes[curSection].sectionNotes[_song.notes[curSection].sectionNotes.length - 1];
 
