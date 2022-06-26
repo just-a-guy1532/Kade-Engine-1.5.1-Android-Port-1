@@ -2403,7 +2403,6 @@ class PlayState extends MusicBeatState
 									camHUD.shake(0.1,0.7);
 									noteMiss(daNote);	
 								});
-						}
 										}
 									if (daNote.noteType == 1 || daNote.noteType == 0)
 										{
