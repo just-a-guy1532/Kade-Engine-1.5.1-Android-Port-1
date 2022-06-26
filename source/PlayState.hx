@@ -2592,6 +2592,14 @@ class PlayState extends MusicBeatState
 				if (daNote.noteType == 2)
 							{
 								health -= 10;
+								boyfriend.specialAnim = true;	
+				boyfriend.playAnim('dodge');
+				if (lightningStrike != null && curStage == 'wethouse')
+					lightningStrike.animation.play('strike', false);
+
+				FlxG.sound.play(Paths.sound('Thunder'), 1, false);
+				FlxG.camera.shake(0.1, 0.1);
+				camHUD.shake(0, 0);
 							}
 						if (daNote.noteType == 1 || daNote.noteType == 0)
 							{
@@ -2608,6 +2616,14 @@ class PlayState extends MusicBeatState
 				if (daNote.noteType == 2)
 							{
 								health -= 10;
+								boyfriend.specialAnim = true;	
+								boyfriend.playAnim('dodge');
+								if (lightningStrike != null && curStage == 'wethouse')
+								lightningStrike.animation.play('strike', false);
+
+								FlxG.sound.play(Paths.sound('Thunder'), 1, false);
+								FlxG.camera.shake(0.1, 0.1);
+								camHUD.shake(0, 0);
 							}
 						if (daNote.noteType == 1 || daNote.noteType == 0)
 							{
@@ -2623,6 +2639,14 @@ class PlayState extends MusicBeatState
 				if (daNote.noteType == 2)
 							{
 								health += 0.04;
+								boyfriend.specialAnim = true;	
+								boyfriend.playAnim('dodge');
+								if (lightningStrike != null && curStage == 'wethouse')
+								lightningStrike.animation.play('strike', false);
+
+								FlxG.sound.play(Paths.sound('Thunder'), 1, false);
+								FlxG.camera.shake(0.1, 0.1);
+								camHUD.shake(0, 0);
 							}
 						if (daNote.noteType == 1 || daNote.noteType == 0)
 							{
@@ -2639,6 +2663,14 @@ class PlayState extends MusicBeatState
 				if (daNote.noteType == 2)
 							{
 								health += 1;
+								boyfriend.specialAnim = true;	
+								boyfriend.playAnim('dodge');
+								if (lightningStrike != null && curStage == 'wethouse')
+								lightningStrike.animation.play('strike', false);
+
+								FlxG.sound.play(Paths.sound('Thunder'), 1, false);
+								FlxG.camera.shake(0.1, 0.1);
+								camHUD.shake(0, 0);
 							}
 						if (daNote.noteType == 1 || daNote.noteType == 0)
 							{
