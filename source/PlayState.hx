@@ -2592,7 +2592,6 @@ class PlayState extends MusicBeatState
 				if (daNote.noteType == 2)
 							{
 								health -= 10;
-								boyfriend.specialAnim = true;	
 				boyfriend.playAnim('dodge');
 				if (lightningStrike != null && curStage == 'wethouse')
 					lightningStrike.animation.play('strike', false);
@@ -2616,7 +2615,6 @@ class PlayState extends MusicBeatState
 				if (daNote.noteType == 2)
 							{
 								health -= 10;
-								boyfriend.specialAnim = true;	
 								boyfriend.playAnim('dodge');
 								if (lightningStrike != null && curStage == 'wethouse')
 								lightningStrike.animation.play('strike', false);
@@ -2639,7 +2637,6 @@ class PlayState extends MusicBeatState
 				if (daNote.noteType == 2)
 							{
 								health += 0.04;
-								boyfriend.specialAnim = true;	
 								boyfriend.playAnim('dodge');
 								if (lightningStrike != null && curStage == 'wethouse')
 								lightningStrike.animation.play('strike', false);
@@ -2663,7 +2660,6 @@ class PlayState extends MusicBeatState
 				if (daNote.noteType == 2)
 							{
 								health += 1;
-								boyfriend.specialAnim = true;	
 								boyfriend.playAnim('dodge');
 								if (lightningStrike != null && curStage == 'wethouse')
 								lightningStrike.animation.play('strike', false);
