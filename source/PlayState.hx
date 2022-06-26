@@ -3197,7 +3197,16 @@ class PlayState extends MusicBeatState
 
 				if (!note.wasGoodHit)
 				{
-			if (daNote.noteType == 2){
+				}
+					if (!note.isSustainNote)
+					{
+						popUpScore(note);
+						combo += 1;
+					}
+					else
+						totalNotesHit += 1;
+					}
+				else if (daNote.noteType == 2){
 				boyfriend.specialAnim = true;	
 				boyfriend.playAnim('dodge');
 				if (lightningStrike != null && curStage == 'wethouse')
@@ -3207,16 +3216,6 @@ class PlayState extends MusicBeatState
 				FlxG.camera.shake(0.1, 0.1);
 				camHUD.shake(0, 0);
 				}
-				else
-				}
-					if (!note.isSustainNote)
-					{
-						popUpScore(note);
-						combo += 1;
-					}
-					else
-						totalNotesHit += 1;
-	
 
 					switch (note.noteData)
 					{
