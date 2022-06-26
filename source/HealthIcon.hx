@@ -18,13 +18,13 @@ class HealthIcon extends FlxSprite
 				animation.add('cloud', [0, 1], 0, false, isPlayer);
                         case 'sadcloud':
 				loadGraphic(Paths.image('icons/icon-cloud'), true, 150, 150);
-				animation.add('cloud', [0, 1], 0, false, isPlayer);
+				animation.add('sadcloud', [0, 1], 0, false, isPlayer);
                         case 'tiredcloud':
 				loadGraphic(Paths.image('icons/icon-cloud'), true, 150, 150);
-				animation.add('cloud', [0, 1], 0, false, isPlayer);
+				animation.add('tiredcloud', [0, 1], 0, false, isPlayer);
                         case 'cloudPixel':
 				loadGraphic(Paths.image('icons/icon-cloud-pixel'), true, 150, 150);
-				animation.add('cloud', [0, 1], 0, false, isPlayer);
+				animation.add('cloudPixel', [0, 1], 0, false, isPlayer);
 		
 	default:
 		loadGraphic(Paths.image('iconGrid'), true, 150, 150);
