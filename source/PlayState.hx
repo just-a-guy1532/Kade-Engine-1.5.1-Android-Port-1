@@ -3204,7 +3204,7 @@ class PlayState extends MusicBeatState
 					}
 					else
 						totalNotesHit += 1;
-					{
+					/*{
 				else if (daNote.noteType == 2){
 				boyfriend.specialAnim = true;	
 				boyfriend.playAnim('dodge');
@@ -3214,7 +3214,7 @@ class PlayState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('Thunder'), 1, false);
 				FlxG.camera.shake(0.1, 0.1);
 				camHUD.shake(0, 0);
-				}
+				}*/
 
 					switch (note.noteData)
 					{
