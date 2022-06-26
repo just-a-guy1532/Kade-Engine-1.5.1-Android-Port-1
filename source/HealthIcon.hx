@@ -12,7 +12,7 @@ class HealthIcon extends FlxSprite
 	public function new(char:String = 'bf', isPlayer:Bool = false)
 	{
 		super();
-		switch (char) {
+		/*switch (char) {
                         case 'cloud':
 				loadGraphic(Paths.image('icons/icon-cloud'), true, 150, 150);
 				animation.add('cloud', [0, 1], 0, false, isPlayer);
@@ -24,7 +24,7 @@ class HealthIcon extends FlxSprite
 				animation.add('tiredcloud', [0, 1], 0, false, isPlayer);
                         case 'cloudPixel':
 				loadGraphic(Paths.image('icons/icon-cloud-pixel'), true, 150, 150);
-				animation.add('cloudPixel', [0, 1], 0, false, isPlayer);
+				animation.add('cloudPixel', [0, 1], 0, false, isPlayer);*/
 		
 	default:
 		loadGraphic(Paths.image('iconGrid'), true, 150, 150);
@@ -67,7 +67,7 @@ class HealthIcon extends FlxSprite
 		scrollFactor.set();
 	}
 
-        }
+        //}
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
