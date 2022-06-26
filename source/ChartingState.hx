@@ -1,4 +1,4 @@
-package;
+package; //I saw Luckydog's code.
 
 import flixel.FlxCamera;
 import flixel.addons.ui.FlxUIText;
@@ -1481,7 +1481,10 @@ class ChartingState extends MusicBeatState
 	function autosaveSong():Void
 	{
 		FlxG.save.data.autosave = Json.stringify({
-			"song": _song
+			"song": _song,
+			"bpm": Conductor.bpm,
+			"sections": _song.notes.length,
+			'notes': _song.notes
 		});
 		FlxG.save.flush();
 	}
@@ -1489,10 +1492,18 @@ class ChartingState extends MusicBeatState
 	private function saveLevel()
 	{
 		var json = {
-			"song": _song
+			"song": _song,
+			"bpm": Conductor.bpm,
+			"sections": _song.notes.length,
+			'notes': _song.notes
 		};
 
 		var data:String = Json.stringify(json);
+		
+		//NativeCFFI.lime_clipboard_set_text(data.trim());
+		openfl.system.System.setClipboard(data.trim());
+
+		//Clipboard.setData(ClipboardFormats.TEXT_FORMAT,data.trim());
 
 		if ((data != null) && (data.length > 0))
 		{
@@ -1500,7 +1511,7 @@ class ChartingState extends MusicBeatState
 			_file.addEventListener(Event.COMPLETE, onSaveComplete);
 			_file.addEventListener(Event.CANCEL, onSaveCancel);
 			_file.addEventListener(IOErrorEvent.IO_ERROR, onSaveError);
-			_file.save(data.trim(), _song.song.toLowerCase() + ".json");
+			_file.save(data.trim(),_song.song.toLowerCase() + ".json");
 		}
 	}
 
