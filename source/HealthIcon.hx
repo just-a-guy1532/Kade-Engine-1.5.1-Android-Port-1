@@ -26,7 +26,7 @@ class HealthIcon extends FlxSprite
 				loadGraphic(Paths.image('icons/icon-cloud-pixel'), true, 150, 150);
 				animation.add('cloudPixel', [0, 1], 0, false, isPlayer);*/
 		
-	default:
+	//default:
 		loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 
 		antialiasing = true;
