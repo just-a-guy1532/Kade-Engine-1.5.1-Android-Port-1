@@ -2589,7 +2589,7 @@ class PlayState extends MusicBeatState
 			switch(daRating)
 			{
 				case 'shit':
-				if (daNote.noteType == 2)
+				/*if (daNote.noteType == 2)
 							{
 								health -= 10;
 				boyfriend.playAnim('dodge');
@@ -2601,7 +2601,7 @@ class PlayState extends MusicBeatState
 				camHUD.shake(0, 0);
 							}
 						if (daNote.noteType == 1 || daNote.noteType == 0)
-							{
+							{*/
 					score = -300;
 					combo = 0;
 					misses++;
@@ -2610,9 +2610,8 @@ class PlayState extends MusicBeatState
 					shits++;
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.25;
-							}
 				case 'bad':
-				if (daNote.noteType == 2)
+				/*if (daNote.noteType == 2)
 							{
 								health -= 10;
 								boyfriend.playAnim('dodge');
@@ -2624,7 +2623,7 @@ class PlayState extends MusicBeatState
 								camHUD.shake(0, 0);
 							}
 						if (daNote.noteType == 1 || daNote.noteType == 0)
-							{
+							{*/
 					daRating = 'bad';
 					score = 0;
 					health -= 0.06;
@@ -2632,9 +2631,8 @@ class PlayState extends MusicBeatState
 					bads++;
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.50;
-							}
 				case 'good':
-				if (daNote.noteType == 2)
+				/*if (daNote.noteType == 2)
 							{
 								health += 0.04;
 								boyfriend.playAnim('dodge');
@@ -2646,7 +2644,7 @@ class PlayState extends MusicBeatState
 								camHUD.shake(0, 0);
 							}
 						if (daNote.noteType == 1 || daNote.noteType == 0)
-							{
+							{*/
 					daRating = 'good';
 					score = 200;
 					ss = false;
@@ -2655,9 +2653,8 @@ class PlayState extends MusicBeatState
 						health += 0.04;
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.75;
-							}
 				case 'sick':
-				if (daNote.noteType == 2)
+				/*if (daNote.noteType == 2)
 							{
 								health += 1;
 								boyfriend.playAnim('dodge');
@@ -2669,7 +2666,7 @@ class PlayState extends MusicBeatState
 								camHUD.shake(0, 0);
 							}
 						if (daNote.noteType == 1 || daNote.noteType == 0)
-							{
+							{*/
 					if (health < 2)
 						health += 0.1;
 					if (FlxG.save.data.accuracyMod == 0)
@@ -2891,7 +2888,6 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		}
 	public function NearlyEquals(value1:Float, value2:Float, unimportantDifference:Float = 10):Bool
 		{
 			return Math.abs(FlxMath.roundDecimal(value1, 1) - FlxMath.roundDecimal(value2, 1)) < unimportantDifference;
