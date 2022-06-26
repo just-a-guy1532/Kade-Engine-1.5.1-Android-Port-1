@@ -3206,7 +3206,7 @@ class PlayState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('Thunder'), 1, false);
 				FlxG.camera.shake(0.1, 0.1);
 				camHUD.shake(0, 0);
-				{
+				}
 				else
 				}
 					if (!note.isSustainNote)
