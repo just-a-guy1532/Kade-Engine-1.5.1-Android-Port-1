@@ -2603,6 +2603,7 @@ class PlayState extends MusicBeatState
 					shits++;
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.25;
+							}
 				case 'bad':
 				if (daNote.noteType == 2)
 							{
@@ -2617,6 +2618,7 @@ class PlayState extends MusicBeatState
 					bads++;
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.50;
+							}
 				case 'good':
 				if (daNote.noteType == 2)
 							{
@@ -2632,6 +2634,7 @@ class PlayState extends MusicBeatState
 						health += 0.04;
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.75;
+							}
 				case 'sick':
 				if (daNote.noteType == 2)
 							{
