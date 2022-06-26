@@ -3197,7 +3197,6 @@ class PlayState extends MusicBeatState
 
 				if (!note.wasGoodHit)
 				{
-				}
 					if (!note.isSustainNote)
 					{
 						popUpScore(note);
@@ -3205,7 +3204,7 @@ class PlayState extends MusicBeatState
 					}
 					else
 						totalNotesHit += 1;
-					}
+					{
 				else if (daNote.noteType == 2){
 				boyfriend.specialAnim = true;	
 				boyfriend.playAnim('dodge');
