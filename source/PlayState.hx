@@ -825,6 +825,27 @@ class PlayState extends MusicBeatState
 			case 'mallEvil':
 				boyfriend.x += 320;
 				dad.y -= 80;
+			case 'house':
+				boyfriend.x += 770;
+				boyfriend.y += 100;
+				gf.x += 400;
+				gf.y += 130;
+				dad.x += 100;
+				dad.y += 100;
+			case 'wethouse':
+				boyfriend.x += 770;
+				boyfriend.y += 100;
+				gf.x += 400;
+				gf.y += 130;
+				dad.x += 100;
+				dad.y += 100;
+			case 'room':
+				boyfriend.x += 770;
+				boyfriend.y += 100;
+				gf.x += 400;
+				gf.y += 130;
+				dad.x += 100;
+				dad.y += 100;
 			case 'school':
 				boyfriend.x += 200;
 				boyfriend.y += 220;
