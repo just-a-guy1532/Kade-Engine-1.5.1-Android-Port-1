@@ -139,6 +139,64 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
+
+			case 'cloud':
+				frames = Paths.getSparrowAtlas('characters/cloud');
+				animation.addByPrefix('idle', 'Idle', 24, false);
+				animation.addByPrefix('singUP', 'Up', 24, false);
+				animation.addByPrefix('singLEFT', 'Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Down', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
+
+			case 'cloudPixel':
+				frames = Paths.getSparrowAtlas('characters/cloudPixel');
+				animation.addByPrefix('idle', 'Idle', 24, false);
+				animation.addByPrefix('singUP', 'Up0', 24, false);
+				animation.addByPrefix('singLEFT', 'Right0', 24, false);
+				animation.addByPrefix('singRIGHT', 'Left0', 24, false);
+				animation.addByPrefix('singDOWN', 'Down0', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'Down Miss', 24, false);
+				animation.addByPrefix('singUPmiss', 'Up Miss', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'Right Miss', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'Left Miss', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
+
+			case 'sadcloud':
+				frames = Paths.getSparrowAtlas('characters/sadcloud');
+				animation.addByPrefix('idle', 'Idle', 24, false);
+				animation.addByPrefix('singUP', 'Up', 24, false);
+				animation.addByPrefix('singLEFT', 'Right', 24, false);
+				animation.addByPrefix('singRIGHT', 'Left', 24, false);
+				animation.addByPrefix('singDOWN', 'Down', 24, false);
+				animation.addByPrefix('hey', 'end', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
+
+			case 'tiredcloud':
+				frames = Paths.getSparrowAtlas('characters/tiredcloud');
+				animation.addByPrefix('idle', 'Idle', 24, false);
+				animation.addByPrefix('singUP', 'Up0', 24, false);
+				animation.addByPrefix('singLEFT', 'Right0', 24, false);
+				animation.addByPrefix('singRIGHT', 'Left0', 24, false);
+				animation.addByPrefix('singDOWN', 'Down0', 24, false);
+				animation.addByPrefix('singUPmiss', 'Up', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'Down', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'Right', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'Left', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
+
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
