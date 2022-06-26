@@ -1450,7 +1450,9 @@ class PlayState extends MusicBeatState
 				else
 					oldNote = null;
 
-				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
+				var daType = songNotes[3];
+
+				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote, false, daType);
 				swagNote.sustainLength = songNotes[2];
 				swagNote.scrollFactor.set(0, 0);
 
@@ -2587,6 +2589,12 @@ class PlayState extends MusicBeatState
 			switch(daRating)
 			{
 				case 'shit':
+				if (daNote.noteType == 2)
+							{
+								health -= 10;
+							}
+						if (daNote.noteType == 1 || daNote.noteType == 0)
+							{
 					score = -300;
 					combo = 0;
 					misses++;
@@ -2596,6 +2604,12 @@ class PlayState extends MusicBeatState
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.25;
 				case 'bad':
+				if (daNote.noteType == 2)
+							{
+								health -= 10;
+							}
+						if (daNote.noteType == 1 || daNote.noteType == 0)
+							{
 					daRating = 'bad';
 					score = 0;
 					health -= 0.06;
@@ -2604,6 +2618,12 @@ class PlayState extends MusicBeatState
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.50;
 				case 'good':
+				if (daNote.noteType == 2)
+							{
+								health += 0.04;
+							}
+						if (daNote.noteType == 1 || daNote.noteType == 0)
+							{
 					daRating = 'good';
 					score = 200;
 					ss = false;
@@ -2613,6 +2633,12 @@ class PlayState extends MusicBeatState
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.75;
 				case 'sick':
+				if (daNote.noteType == 2)
+							{
+								health += 1;
+							}
+						if (daNote.noteType == 1 || daNote.noteType == 0)
+							{
 					if (health < 2)
 						health += 0.1;
 					if (FlxG.save.data.accuracyMod == 0)
@@ -3206,17 +3232,6 @@ class PlayState extends MusicBeatState
 					}
 					else
 						totalNotesHit += 1;
-					/*{
-				else if (daNote.noteType == 2){
-				boyfriend.specialAnim = true;	
-				boyfriend.playAnim('dodge');
-				if (lightningStrike != null && curStage == 'wethouse')
-					lightningStrike.animation.play('strike', false);
-
-				FlxG.sound.play(Paths.sound('Thunder'), 1, false);
-				FlxG.camera.shake(0.1, 0.1);
-				camHUD.shake(0, 0);
-				}*/
 
 					switch (note.noteData)
 					{
