@@ -141,7 +141,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 			case 'cloud':
-				frames = Paths.getSparrowAtlas('characters/cloud');
+				frames = Paths.getSparrowAtlas('characters/cloud', 'shared');
 				animation.addByPrefix('idle', 'Idle', 24, false);
 				animation.addByPrefix('singUP', 'Up', 24, false);
 				animation.addByPrefix('singLEFT', 'Left', 24, false);
@@ -153,7 +153,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 			case 'cloudPixel':
-				frames = Paths.getSparrowAtlas('characters/cloudPixel');
+				frames = Paths.getSparrowAtlas('characters/cloudPixel', 'shared');
 				animation.addByPrefix('idle', 'Idle', 24, false);
 				animation.addByPrefix('singUP', 'Up0', 24, false);
 				animation.addByPrefix('singLEFT', 'Right0', 24, false);
@@ -169,7 +169,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 			case 'sadcloud':
-				frames = Paths.getSparrowAtlas('characters/sadcloud');
+				frames = Paths.getSparrowAtlas('characters/sadcloud', 'shared');
 				animation.addByPrefix('idle', 'Idle', 24, false);
 				animation.addByPrefix('singUP', 'Up', 24, false);
 				animation.addByPrefix('singLEFT', 'Right', 24, false);
@@ -182,7 +182,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 			case 'tiredcloud':
-				frames = Paths.getSparrowAtlas('characters/tiredcloud');
+				frames = Paths.getSparrowAtlas('characters/tiredcloud', 'shared');
 				animation.addByPrefix('idle', 'Idle', 24, false);
 				animation.addByPrefix('singUP', 'Up0', 24, false);
 				animation.addByPrefix('singLEFT', 'Right0', 24, false);
