@@ -2591,7 +2591,7 @@ class PlayState extends MusicBeatState
 				case 'shit':
 				if (daNote.noteType == 2)
 							{
-								health -= 10;
+								health -= 0.04;
 				boyfriend.playAnim('dodge');
 				if (lightningStrike != null && curStage == 'wethouse')
 					lightningStrike.animation.play('strike', false);
@@ -2614,7 +2614,7 @@ class PlayState extends MusicBeatState
 				case 'bad':
 				if (daNote.noteType == 2)
 							{
-								health -= 10;
+								health -= 0.05;
 								boyfriend.playAnim('dodge');
 								if (lightningStrike != null && curStage == 'wethouse')
 								lightningStrike.animation.play('strike', false);
@@ -2659,7 +2659,7 @@ class PlayState extends MusicBeatState
 				case 'sick':
 				if (daNote.noteType == 2)
 							{
-								health += 1;
+								health += 0.1;
 								boyfriend.playAnim('dodge');
 								if (lightningStrike != null && curStage == 'wethouse')
 								lightningStrike.animation.play('strike', false);
